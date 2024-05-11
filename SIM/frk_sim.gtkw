@@ -1,0 +1,38 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Wed Dec  6 09:11:25 2023
+[*]
+[dumpfile] "/home/frank/WS/design/RTL_verification/frk_rtl/RISC_V/RISC-V-CPU_taiwan/SIM/tb_top.vcd"
+[dumpfile_mtime] "Wed Dec  6 09:09:06 2023"
+[dumpfile_size] 260927
+[savefile] "/home/frank/WS/design/RTL_verification/frk_rtl/RISC_V/RISC-V-CPU_taiwan/SIM/frk_sim.gtkw"
+[timestart] 0
+[size] 2048 1089
+[pos] -165 -165
+*-18.483145 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_top.
+[treeopen] tb_top.u_CPU.
+[sst_width] 214
+[signals_width] 226
+[sst_expanded] 1
+[sst_vpaned_height] 324
+@800201
+-u_CPU
+@29
+tb_top.Clk
+tb_top.reset
+tb_top.DataOrReg
+@23
+tb_top.address[4:0]
+tb_top.instr_i[7:0]
+@29
+tb_top.vout_addr[1:0]
+@23
+tb_top.value_o[7:0]
+@29
+tb_top.is_positive
+tb_top.easter_egg[2:0]
+@1000201
+-u_CPU
+[pattern_trace] 1
+[pattern_trace] 0
