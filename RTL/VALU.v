@@ -1,4 +1,4 @@
-module VALU (v1_i, v2_i, VALUCtrl_i, v_o,over);
+module VALU (v1_i, v2_i, VALUCtrl_i, v_o, over);
 
     input signed[31:0] v1_i, v2_i; 
     input [2:0] VALUCtrl_i; //VALU instruction
@@ -73,13 +73,13 @@ module VALU (v1_i, v2_i, VALUCtrl_i, v_o,over);
                 v_o = {e4,e3,e2,e1};
 
 
-                if( ~v1_i[7]  & (v2_i[7]) )over[0] = 1;
+                if( ~v1_i[7]  & (v2_i[7]) )     over[0] = 1;
                 else over[0] = 0;
-                if( ~v1_i[15] & (v2_i[15]) )over[1] = 1;
+                if( ~v1_i[15] & (v2_i[15]) )    over[1] = 1;
                 else over[1] = 0;
-                if( ~v1_i[23] & (v2_i[23]) )over[2] = 1;
+                if( ~v1_i[23] & (v2_i[23]) )    over[2] = 1;
                 else over[2] = 0;
-                if( ~v1_i[31] & (v2_i[31]) )over[3] = 1;
+                if( ~v1_i[31] & (v2_i[31]) )    over[3] = 1;
                 else over[3] = 0;
 
             end

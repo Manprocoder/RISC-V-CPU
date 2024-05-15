@@ -15,7 +15,7 @@ parameter MUL = 3'b110;
 
 /* implement here */
 always@(*)begin
-Zero_o   = (data1_i - data2_i)?0:1;
+  Zero_o   = (data1_i - data2_i)?0:1;
 case(ALUCtrl_i)
 
   SUM : begin

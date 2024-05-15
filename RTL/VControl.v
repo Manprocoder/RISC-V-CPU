@@ -14,19 +14,17 @@ module Control(
 
 //ports
 
-input [6:0]     Op_i;
-output reg         RegDst_o;
-output reg[1:0]     ALUOp_o;
-output  reg      ALUSrc_o,immSelect_o;
-output  reg    RegWrite_o ,MemRd_o,MemWr_o,Branch_o,MemToReg_o, VMemWr_o; //NEW
+input [6:0]         Op_i;
+output  reg         RegDst_o;
+output  reg[1:0]    ALUOp_o;
+output  reg         ALUSrc_o,immSelect_o;
+output  reg         RegWrite_o ,MemRd_o,MemWr_o,Branch_o,MemToReg_o, VMemWr_o; //NEW
 
 
 
 
 always@(*)begin
-
   case(Op_i)
-
   7'b0010011 : begin //addi
   ALUOp_o = 2'b11;
   ALUSrc_o = 1'b1;

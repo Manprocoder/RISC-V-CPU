@@ -17,6 +17,7 @@ input 	[11:0]	pcIm_i;
 output 	[11:0]	pcIm_o;
 output	[31:0]	pc_o, inst_o;
 
+//inst_o: opcode
 reg [31:0]	pc_o, inst_o;
 reg [11:0] 	pcIm_o;
 
@@ -28,7 +29,7 @@ always@(posedge clk_i) begin
 	end
 	else if(flush_i) begin
 		pc_o <= pc_i;
-		inst_o <= 32'b0;
+		inst_o <= 32'b0;   
 		pcIm_o <= 12'b0;
 	end
 	else if(hazard_i) begin

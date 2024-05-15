@@ -15,13 +15,13 @@ input   [7:0]       instr_i;
 output  [31:0]      instr_o;
 
 // Instruction memory
-reg     [31:0]     memory  [0:63];
+reg     [31:0]     memory  [0:63];   //64 words
 reg     [1:0]      quad,quad_d1;
 reg     [7:0]      instr_read;
 reg     [5:0]      address_read;
 reg                flag,flag_next;
 reg     [1:0]      counter,counter_next;
-reg     [5:0]      instr_wr_address,instr_wr_address_next;
+reg     [5:0]      instr_wr_address,instr_wr_address_next; //words
 
 assign  instr_o = memory[addr_i>>2];  
 
@@ -42,6 +42,7 @@ always@(posedge clk or posedge reset)begin
         for(i=0;i<63;i=i+1)begin
             memory[i] <= 0;
         end
+
         counter         <= 0;
         quad            <= 0;
         instr_read      <= 0;
@@ -60,7 +61,7 @@ always@(posedge clk or posedge reset)begin
         
         
         if(flag)begin
-            case(quad)
+            case(quad_d1)
             2'b00: memory[address_read][7:0]   <= (instr_read == 8'b1111_1111)?0:instr_read;
             2'b01: memory[address_read][15:8]  <= (instr_read == 8'b1111_1111)?0:instr_read;
             2'b10: memory[address_read][23:16] <= (instr_read == 8'b1111_1111)?0:instr_read;
